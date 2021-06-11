@@ -6,13 +6,13 @@ import Image from "../image/Image";
 
 export default function PdCardMd() {
   return (
-    <div className="bg-white px-2 py-2 my-2 rounded">
+    <div className="px-2 py-2 my-2 bg-white rounded">
       <div className="relative">
         <Image src={tshirt} alt="Product Image 16x9" width="10" height="10" />
-        <CgHeart className="absolute top-2 right-2 text-2xl text-gray-600" />
+        <CgHeart className="absolute text-2xl text-gray-600 top-2 right-2" />
       </div>
       {/* Card footer */}
-      <div className="text-gray-500 text-md py-3  items-center flex">
+      <div className="flex items-center justify-between py-3 text-gray-500 text-md">
         <h3 className="">Lorem ipsum dolor sit.</h3>
         <IconBtn />
       </div>
