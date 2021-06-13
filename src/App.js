@@ -6,6 +6,7 @@ import SingleProduct from "./components/pages/singleProPg/SingleProduct";
 import store from "./redux/Store";
 function App() {
   return (
+
     <Provider store={store}>
       <div className="bg-gray-300">
         <Router>
@@ -14,13 +15,14 @@ function App() {
             <Route exact path="/">
               <Home></Home>
             </Route>
-            <Route path="/single-product">
+            <Route path="/product-detail">
               <SingleProduct></SingleProduct>
             </Route>
           </Switch>
         </Router>
       </div>
     </Provider>
+
   );
 }
 
