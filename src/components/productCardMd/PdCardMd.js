@@ -7,6 +7,9 @@ import Image from "../image/Image";
 
 export default function PdCardMd() {
   const [wish, setWish] = useState(false);
+  const handleProduct = () => {
+    alert("Product Clicked");
+  };
   return (
     <div className="px-2 py-2 my-2 bg-white rounded">
       <div className="relative">
@@ -22,9 +25,9 @@ export default function PdCardMd() {
         </h2>
       </div>
       {/* Card footer */}
-      <div className="flex items-center justify-between py-3 text-gray-500 text-md">
-        <div>
-          <h1 className="font-medium">Lorem ipsum dolor sit.</h1>
+      <div className="flex items-center justify-between py-3 text-gray-500 cursor-pointer text-md">
+        <div onClick={handleProduct} className="flex-grow">
+          <h1 className="font-medium">Lorem ipsum dolor sit. Lorem ipsum.</h1>
         </div>
         <IconBtn />
       </div>
