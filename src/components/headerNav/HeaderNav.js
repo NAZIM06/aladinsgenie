@@ -26,7 +26,12 @@ export default function HeaderNav({}) {
         {/* Menu */}
         <ul className="ml-4 text-gray-500 list-none">
           {menuItems.map((el) => (
-            <NavLink exact to={`${el.slug}`} activeClassName="text-gray-900">
+            <NavLink
+              exact
+              to={`${el.slug}`}
+              activeClassName="text-gray-900"
+              key={`${el.slug}`}
+            >
               <li className="inline-block mr-8 font-medium">{el.name} </li>
             </NavLink>
           ))}
