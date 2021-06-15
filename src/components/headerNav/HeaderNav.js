@@ -3,7 +3,9 @@ import { AiTwotoneShopping } from "react-icons/ai";
 import { BiShoppingBag } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
 import { FaHeart, FaRegHeart, FaUserCircle } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useLocation } from "react-router-dom";
+import { change_cart_state } from "./../../redux/actions/index";
 import CartModal from "./../cartModal/CartModal";
 import Image from "./../image/Image";
 
@@ -14,6 +16,10 @@ export default function HeaderNav({}) {
     { name: "Contact", slug: "/contact" },
   ];
   const location = useLocation();
+
+  // Cart modal state
+  const cartIsOpen = useSelector((state) => state.cartModalReducer);
+  const dispatch = useDispatch();
   return (
     <header className="relative py-2">
       {/* Logo */}
@@ -44,14 +50,17 @@ export default function HeaderNav({}) {
           </NavLink>
 
           <span className="relative">
-            <NavLink to="/cart" className="p-2 mr-8">
+            <div
+              className="p-2 mr-8 cursor-pointer"
+              onClick={() => dispatch(change_cart_state())}
+            >
               {location.pathname === "/cart" ? (
                 <AiTwotoneShopping />
               ) : (
                 <BiShoppingBag />
               )}
-            </NavLink>
-            <CartModal></CartModal>
+            </div>
+            {cartIsOpen && <CartModal></CartModal>}
           </span>
 
           {/* <NavLink to="/cart" className="relative">
