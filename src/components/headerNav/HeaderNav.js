@@ -54,25 +54,11 @@ export default function HeaderNav({}) {
               className="p-2 mr-8 cursor-pointer"
               onClick={() => dispatch(change_cart_state())}
             >
-              {location.pathname === "/cart" ? (
-                <AiTwotoneShopping />
-              ) : (
-                <BiShoppingBag />
-              )}
+              {cartIsOpen ? <AiTwotoneShopping /> : <BiShoppingBag />}
             </div>
             {cartIsOpen && <CartModal></CartModal>}
           </span>
 
-          {/* <NavLink to="/cart" className="relative">
-            <div className="p-2 mr-8">
-              {location.pathname === "/cart" ? (
-                <AiTwotoneShopping />
-              ) : (
-                <BiShoppingBag />
-              )}
-            </div>
-            <CartModal></CartModal>
-          </NavLink> */}
           <NavLink to="/profile" className="p-2">
             {location.pathname === "/profile" ? (
               <FaUserCircle />
