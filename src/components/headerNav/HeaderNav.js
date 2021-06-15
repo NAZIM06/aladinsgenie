@@ -4,6 +4,7 @@ import { BiShoppingBag } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
 import { FaHeart, FaRegHeart, FaUserCircle } from "react-icons/fa";
 import { NavLink, useLocation } from "react-router-dom";
+import CartModal from "./../cartModal/CartModal";
 import Image from "./../image/Image";
 
 export default function HeaderNav({}) {
@@ -14,7 +15,7 @@ export default function HeaderNav({}) {
   ];
   const location = useLocation();
   return (
-    <header className="py-2">
+    <header className="relative py-2">
       {/* Logo */}
       <nav className="container flex items-center justify-between mx-auto">
         <NavLink to="/">
@@ -41,13 +42,28 @@ export default function HeaderNav({}) {
           <NavLink to="/wishlist" className="p-2 mr-8">
             {location.pathname === "/wishlist" ? <FaHeart /> : <FaRegHeart />}
           </NavLink>
-          <NavLink to="/cart" className="p-2 mr-8">
-            {location.pathname === "/cart" ? (
-              <AiTwotoneShopping />
-            ) : (
-              <BiShoppingBag />
-            )}
-          </NavLink>
+
+          <span className="relative">
+            <NavLink to="/cart" className="p-2 mr-8">
+              {location.pathname === "/cart" ? (
+                <AiTwotoneShopping />
+              ) : (
+                <BiShoppingBag />
+              )}
+            </NavLink>
+            <CartModal></CartModal>
+          </span>
+
+          {/* <NavLink to="/cart" className="relative">
+            <div className="p-2 mr-8">
+              {location.pathname === "/cart" ? (
+                <AiTwotoneShopping />
+              ) : (
+                <BiShoppingBag />
+              )}
+            </div>
+            <CartModal></CartModal>
+          </NavLink> */}
           <NavLink to="/profile" className="p-2">
             {location.pathname === "/profile" ? (
               <FaUserCircle />

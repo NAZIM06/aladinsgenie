@@ -1,14 +1,21 @@
 import React, { useState } from "react";
 import { CgHeart } from "react-icons/cg";
 import { FaHeart } from "react-icons/fa";
+import { useDispatch } from "react-redux";
 import IconBtn from "../iconBtn/IconBtn";
 import Image from "../image/Image";
+import { add_to_cart } from "./../../redux/actions/index";
 
 export default function PdCardMd({ data }) {
   const { title, price, description, imageURL } = data;
+  const dispatch = useDispatch();
   const [wish, setWish] = useState(false);
   const handleProduct = () => {
     alert("Product Clicked");
+  };
+
+  const handleAddToCart = (pd) => {
+    dispatch(add_to_cart(pd));
   };
   return (
     <div className="px-2 py-2 my-2 bg-white rounded">
@@ -29,7 +36,9 @@ export default function PdCardMd({ data }) {
         <div onClick={handleProduct} className="flex-grow">
           <h1 className="font-medium">{title}</h1>
         </div>
-        <IconBtn />
+        <div onClick={() => handleAddToCart(data)}>
+          <IconBtn />
+        </div>
       </div>
     </div>
   );
