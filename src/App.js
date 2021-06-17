@@ -9,7 +9,7 @@ import store from "./redux/Store";
 function App() {
   return (
     <Provider store={store}>
-      <div className="bg-gray-300">
+      <div className="min-h-screen bg-gray-300">
         <Router>
           <HeaderNav />
           <Switch>
