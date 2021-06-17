@@ -1,10 +1,9 @@
-import React from "react";
-import CheckoutItem from "./../../checkoutItem/CheckoutItem";
+import React from 'react'
 
 export default function Checkout() {
-  return (
-    <div className="container mx-auto">
-      <CheckoutItem />
-    </div>
-  );
+    return (
+        <div>
+            Item
+        </div>
+    )
 }
