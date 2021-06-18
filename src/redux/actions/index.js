@@ -16,3 +16,16 @@ export const change_cart_state = () => {
     type: "CART_MODAL_STATE",
   };
 };
+
+export const increment_qty = (productData) => {
+  return {
+    type: "INCREMENT_QTY",
+    product: productData,
+  }
+}
+export const decrement_qty = (productData) => {
+  return {
+    type: "DECREMENT_QTY",
+    product: productData,
+  }
+}
