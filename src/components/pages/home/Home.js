@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import PdCardMd from "../../productCardMd/PdCardMd";
 
 export default function Home() {
+  document.title = 'Aladinsgenie'
   const [products, setProducts] = useState([]);
   useEffect(() => {
     fetch("http://localhost:8000/products")

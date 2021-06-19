@@ -17,3 +17,18 @@ export const change_cart_state = () => {
   };
 };
 
+<<<<<<< HEAD
+=======
+export const increment_qty = (productData) => {
+  return {
+    type: "INCREMENT_QTY",
+    product: productData,
+  }
+}
+export const decrement_qty = (productData) => {
+  return {
+    type: "DECREMENT_QTY",
+    product: productData,
+  }
+}
+>>>>>>> ff28e29f31be24ad863078ed96337ca6110ece95
