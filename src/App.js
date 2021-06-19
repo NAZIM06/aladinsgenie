@@ -2,7 +2,8 @@ import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AddProduct from "./components/addProduct/AddProduct";
 import HeaderNav from "./components/headerNav/HeaderNav";
-import Checkout from './components/Pages/checkout/Checkout';
+import NotFound from "./components/Pages/404/NotFound";
+import Checkout from "./components/Pages/checkout/Checkout";
 import Home from "./components/Pages/home/Home";
 import SingleProduct from "./components/Pages/singleProPg/SingleProduct";
 import store from "./redux/Store";
@@ -25,6 +26,9 @@ function App() {
             </Route>
             <Route path="/checkout">
               <Checkout />
+            </Route>
+            <Route path="*">
+              <NotFound />
             </Route>
           </Switch>
         </Router>
