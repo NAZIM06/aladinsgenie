@@ -2,6 +2,7 @@ import React from 'react';
 import tshirt from "../../../assets/Vector-T-shirt.png";
 import './SingleProduct.css'
 import IconBtn from "../../iconBtn/IconBtn";
+import PdCardMd from "../../productCardMd/PdCardMd";
 
 const SingleProduct = () => {
     return (
@@ -44,10 +45,9 @@ const SingleProduct = () => {
                     </label>
                     <IconBtn></IconBtn>
                 </div>
-
             </div>
-
         </section>
+
 
     );
 };

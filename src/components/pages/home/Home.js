@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import PdCardMd from "./../../productCardMd/PdCardMd";
+import PdCardMd from "../../productCardMd/PdCardMd";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
