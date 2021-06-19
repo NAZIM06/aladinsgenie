@@ -17,8 +17,6 @@ export const change_cart_state = () => {
   };
 };
 
-<<<<<<< HEAD
-=======
 export const increment_qty = (productData) => {
   return {
     type: "INCREMENT_QTY",
@@ -31,4 +29,3 @@ export const decrement_qty = (productData) => {
     product: productData,
   }
 }
->>>>>>> ff28e29f31be24ad863078ed96337ca6110ece95

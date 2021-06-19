@@ -2,12 +2,10 @@ import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AddProduct from "./components/addProduct/AddProduct";
 import HeaderNav from "./components/headerNav/HeaderNav";
-<<<<<<< HEAD
-=======
 import NotFound from "./components/Pages/404/NotFound";
->>>>>>> ff28e29f31be24ad863078ed96337ca6110ece95
 import Checkout from "./components/Pages/checkout/Checkout";
 import Home from "./components/Pages/home/Home";
+import Register from "./components/Pages/Register/Register"
 import Login from "./components/Pages/Login/Login";
 import SingleProduct from "./components/Pages/singleProduct/SingleProduct";
 import store from "./redux/Store";
@@ -30,13 +28,14 @@ function App() {
             <Route path="/checkout">
               <Checkout />
             </Route>
-<<<<<<< HEAD
-            <Route exact path="/login">
+            <Route path="/login">
               <Login/>
-=======
+              </Route>
+              <Route path="/register">
+              <Register></Register>
+              </Route>
             <Route path="*">
               <NotFound />
->>>>>>> ff28e29f31be24ad863078ed96337ca6110ece95
             </Route>
           </Switch>
         </Router>

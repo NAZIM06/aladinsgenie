@@ -1,49 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
-const Login = () => {
+export default function Login() {
     return (
-        <div className="col-lg-8 offset-lg-2">
-            <h2>Login</h2>
-            <form name="form">
-                <div className="form-group">
-                    <label>Username</label>
-                    <input type="text" name="username"  className={'form-control'} />
-                    
-                </div>
-                <div className="form-group">
-                    <label>Password</label>
-                    <input type="password" name="password"  className={'form-control'} />
-                   
-                </div>
-                <div className="form-group">
-                    <button className="btn btn-primary">Login</button>
-                    <Link to="/register" className="btn btn-link">Register</Link>
-                    <Link to="/forgot-password" className="btn btn-link">Forgot Password</Link>
-                </div>
-            </form>
+        <div className="h-screen overflow-hidden flex items-center justify-center" style={{ background: '#edf2f7' }}>
+            <div className="leading-loose">
+                <form className="max-w-xl m-4 p-10 bg-white rounded shadow-xl ">
+                    <p className="text-gray-800 text-2xl font-bold mb-5">Login</p>
+                    <div className="">
+                        
+                        <input className="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" name="cus_name" type="text" required="" placeholder="Username" aria-label="Name" />
+                    </div>
+                    <div className="mt-2">
+                        <input className="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" name="cus_email" type="password" required="" placeholder="Password" aria-label="password" />
+                    </div>
+                    <div className="mt-4">
+                        <button className="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded" type="submit">Login</button>
+                        <Link to="/register" className="ml-5 font-bold text-purple-600">Register</Link>
+                    </div>
+
+                </form>
+            </div>
         </div>
-    );
-};
-
-export default Login;
-
-// import React from 'react';
-// import { useForm } from 'react-hook-form';
-// // import './Login.css'
-
-// export default function Login() {
-//   const { register, handleSubmit, formState: { errors } } = useForm();
-//   const onSubmit = data => console.log(data);
-//   console.log(errors);
-  
-//   return (
-//     <form onSubmit={handleSubmit(onSubmit)}>
-//       <input type="tel" placeholder="Mobile number" {...register("Mobile number", {required: true, minLength: 6, maxLength: 12})} />
-//       <input type="number" placeholder="Password" {...register("Password", { min: 6})} />
-
-//       <input type="submit" />
-//     </form>
-//   );
-// }
+    )
+}
