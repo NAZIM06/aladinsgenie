@@ -88,7 +88,7 @@ const Register = () => {
 							<hr className="mb-6 border-t" />
 							<div className="text-center">
 							
-                                <Link to="/home" className="ml-5 font-bold text-red-600">Forgot Password?</Link>
+                                <Link to="/" className="ml-5 font-bold text-red-600">Forgot Password?</Link>
                                 
 							</div>
 							<div className="text-center">	

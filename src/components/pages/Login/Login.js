@@ -9,10 +9,10 @@ export default function Login() {
                     <p className="text-gray-800 text-2xl font-bold mb-5">Login</p>
                     <div className="">
                         
-                        <input className="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" name="cus_name" type="text" required="" placeholder="Username" aria-label="Name" />
+                        <input className="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded mb-2" name="cus_name" type="text" required="" placeholder="Username" aria-label="Name" />
                     </div>
                     <div className="mt-2">
-                        <input className="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" name="cus_email" type="password" required="" placeholder="Password" aria-label="password" />
+                        <input className="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" name="cus_email" type="password" required="" placeholder="Password" aria-label="password" />
                     </div>
                     <div className="mt-4">
                         <button className="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded" type="submit">Login</button>
